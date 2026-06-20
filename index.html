@@ -128,7 +128,7 @@ input::placeholder{color:var(--hint)}
 <div class="main">
   <div class="topbar">
     <div>
-      <div style="font-size:15px;font-weight:500">Good <span id="greeting">day, Vinz!</span></div>
+      <div style="font-size:15px;font-weight:500">Good <span id="greeting"></span> Vinz!</div>
       <div style="font-size:10px;color:var(--muted);margin-top:1px" id="todayDate"></div>
     </div>
     <div class="tbar-r">
@@ -973,7 +973,7 @@ function renderAll(){
 //  INIT
 // ═══════════════════════════════════════════════════════════
 const _now=new Date(), _hr=_now.getHours();
-document.getElementById('greeting').textContent=_hr<12?'morning':_hr<17?'afternoon':'evening';
+document.getElementById('greeting').textContent=_hr<12?'morning,':_hr<17?'afternoon,':'evening,';
 document.getElementById('todayDate').textContent=_now.toLocaleDateString('en-PH',{weekday:'long',year:'numeric',month:'long',day:'numeric'});
 const _nxt=new Date();_nxt.setMonth(_nxt.getMonth()+1);_nxt.setDate(1);
 document.getElementById('nextDate').textContent=_nxt.toLocaleDateString('en-PH',{month:'long',day:'numeric',year:'numeric'});
